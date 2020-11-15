@@ -1,0 +1,13 @@
+---
+title: "Developing Data Products - Assignment 1"
+date: "15/11/2020"
+output: html_document
+---
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+library(leaflet)
+testmap <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat = 48.8584, lng = 2.2945, popup = "The Eiffel Tower")
+testmap
+```
