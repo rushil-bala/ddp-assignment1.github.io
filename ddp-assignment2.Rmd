@@ -1,0 +1,24 @@
+---
+title: "Developing Data Products"
+subtitle: "Assignment 2"
+date: "15/11/2020"
+output: ioslides_presentation
+---
+
+## Introduction
+In this assignment, the `mtcars` dataset was analysed. The following figure contains the `mpg` vs. `wt` by `am` plot of the dataset.
+
+## Car Mileage by Weight and Transmission
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+library(plotly)
+mtcars$am <- as.factor(mtcars$am)
+levels(mtcars$am) <- c("Auto.", "Man.")
+plot_ly(mtcars, y = ~mpg, x = ~wt,
+        type = "scatter", color = ~am,
+        text = ~paste("Weight: ", wt, "MPG: ", mpg)
+        ) %>%
+  layout(yaxis = list(title = "MPG"), xaxis = list(title = "Weight"), title = "MPG vs. Weight")
+```
+
+## End
