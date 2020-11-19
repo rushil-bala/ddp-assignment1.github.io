@@ -1,0 +1,32 @@
+Developing Data Products - Assignment 3
+========================================================
+date: 18-11-2020
+autosize: true
+
+Introduction
+========================================================
+
+In this project, the ``diamonds` dataset was analyzed. The aim was to create a Shiny web application that can predict the price of a diamond depending on its features using a linear regression model. This presentation is a short pitch for the application which can be found [**here**] (https://rushil-bala.shinyapps.io).
+
+Summary of the Dataset
+========================================================
+
+```{r warning = FALSE, message = FALSE}
+library(ggplot2)
+summary(diamonds)
+```
+
+Source Code
+========================================================
+
+The source code is present in the following two files:
+
+- `ui.R`
+- `server.R`
+
+that can be found [**here**] (https://github.com/rushil-bala/rushil-bala.github.io).
+
+Application Details
+========================================================
+
+The application will generate a `price` vs. `carat` plot of the dataset which contains the regression line. The application users can specify the 4Cs of diamond quality - carat, clarity, color and cut - to subset the dataset for the regression. The predicted price of a diamond with the specified features will be displayed below the plot.
